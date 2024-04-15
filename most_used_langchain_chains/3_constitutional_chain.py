@@ -1,5 +1,6 @@
 from langchain_openai import OpenAI
-from langchain.chains import LLMChain, ConstitutionalChain
+from langchain.chains.llm import LLMChain
+from langchain.chains.constitutional_ai.base import ConstitutionalChain
 from langchain.prompts import PromptTemplate
 from langchain.chains.constitutional_ai.models import ConstitutionalPrinciple
 
