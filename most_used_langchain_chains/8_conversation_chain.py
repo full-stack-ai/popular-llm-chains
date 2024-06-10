@@ -20,6 +20,7 @@ prompt = PromptTemplate(input_variables=["history", "input"], template=template)
 memory = ConversationBufferMemory(ai_prefix="AI Assistant", user_prefix="Friend")
 # memory = ConversationSummaryMemory(ai_prefix="AI Assistant", user_prefix="Friend")
 # memory = ConversationBufferWindowMemory(ai_prefix="AI Assistant", user_prefix="Friend", k=4, memory_key="chat_history")
+memory = ConversationKGMemory(llm=llm,)
 
 conversation = ConversationChain(
     prompt=prompt,
